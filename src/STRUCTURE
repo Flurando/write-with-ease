@@ -1,3 +1,4 @@
 Use the modular way of consisting the executable where the main body should only be compiled using main, while other source files should be compiled into libraries and be linked against main at runtime.
 main: the root function caller and operator
 config: provide config related functions, like parsing the config file and produce a corresponding struct holding the config.
+io:provide io related functions, like displaying contents in the file and some convenient ways to write user input to a file.
