@@ -1,7 +1,8 @@
 (define config-pairs
-	'((current-file-name . "")
-	  (default-mode . "read")
-	 )
+	(list
+		(cons 'current-file-name "")
+		(cons 'default-mode "read")
+	)
 )
 
 ;;;TODO: need formating the string elsewhere quickly instead of typing by hand.
