@@ -9,9 +9,9 @@
 ;;;automatic config-pairs key generating are preferred.
 (define (update-config)
 	(display "running update-config...\n")
-	(let ((new-file-name (assq-ref config-pairs 'current-file-name)))
+	(let ((new-file-name (assoc-ref config-pairs 'current-file-name)))
 		(system
-			(format #f "sed -i -e 's/(current-file-name . \\\".*\\\")/(current-file-name . \\\"~a\\\")/' ./config.scm" new-file-name
+			(format #f "sed -i 's/\"^*\"/\"~a\"/1' ./config.scm" new-file-name
 			)
 		)
 	)
