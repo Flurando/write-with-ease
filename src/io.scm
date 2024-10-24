@@ -20,10 +20,9 @@
 					)
 				)
 			)
-			'file-reading-ends-successfully
 		)
 	)
-	'func-end-ok
+	file-name
 )
 
 (define (append-single-line file-name line-without-newline-to-append)
@@ -33,5 +32,5 @@
 		(close-port output-port)
 		'file-writing-ends-successfully
 	)
-	'func-end-ok
+	line-without-newline-to-append
 )
