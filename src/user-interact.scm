@@ -13,7 +13,13 @@
 		(display "enter the file name: ")
 		(set! file-name (read-line))
 		(display "Sure?[Y/N]")
-		(if ((read-line) == "Y") (break))
+		(if (string=? (read-line) "Y") (break))
 	)
 	file-name
+)
+
+(define (display-help-message)
+	(display "availuable commands:/quit, /set, /show, /help")
+	(newline)
+	'func-end-ok
 )

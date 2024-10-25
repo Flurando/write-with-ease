@@ -14,13 +14,14 @@
 				(input-line (read-line))
 			)
 			(cond
-				((equal? input-line "/quit") (break 'while-loop-end-successfully))
-				((equal? input-line "/set") (set! new-file-to-edit (set-new-file-to-edit (ask-file-name))))
-				((equal? input-line "/show") (display-entire-file new-file-to-edit))
+				((string=? input-line "/quit") (break 'while-loop-end-successfully))
+				((string=? input-line "/set") (set! new-file-to-edit (set-new-file-to-edit (ask-file-name))))
+				((string=? input-line "/show") (display-entire-file new-file-to-edit))
+				((string=? input-line "/help") (display-help-message))
 				(else (append-single-line new-file-to-edit input-line))
 			)
 		)
 	)
-	(if (not (equal? old-file-to-edit new-file-to-edit)) (update-config))
+	(if (not (string=? old-file-to-edit new-file-to-edit)) (update-config))
 	0
 )
