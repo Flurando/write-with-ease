@@ -14,3 +14,8 @@ I mean, it should not have a huge GUI and should not block the current emulated 
 
 # Howto
 I plan to start with something simple and move towards my wish slowly.
+
+#NEWS
+Recently I found out that on linux the stuff I described is already there and quite useful. With a manner like `cat > somewriting << EOF` for starting a new file and `cat >> somewriting << EOF` to append to a file, along with `sed` that can powerfully edit text if one understand s regex and `sed` itself. Also, for those who handle elisp well can just customize their emacs or just enjoy the already awesome functionalities as long as he or she is familiar with the binded keyboard actions.
+
+I mean, it seems really little use to make such a toy which, compared to other projects, is only slightly more advanced than "Hello, World" or "guess a number between 1~100", even newbies can write one with the help of AI or just the document in a single day...But I will go on anywway, as long as I figured out some interesting things or more useful stuff to put here like extending the functionalities using FFI in guile scheme.(I haven't not only because I am not a powerful coder with other languages as well, nor because I haven't written a single makefile never to say using the GNU autotool...but because...Well, I can't think of an excuse now |:(| ! )
